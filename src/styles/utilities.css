@@ -1,4 +1,15 @@
-@utility flex-center {
+@utility flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@utility flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@utility nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
