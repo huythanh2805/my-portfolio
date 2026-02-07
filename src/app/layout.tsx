@@ -27,8 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          `${inter.variable} ${calistoga.variable} bg-gray-900 text-white font-sans`
-        }
+          `${inter.variable} ${calistoga.variable} bg-gray-900 text-white font-sans max-w-screen overflow-x-hidden`}
       >
         {children}
       </body>

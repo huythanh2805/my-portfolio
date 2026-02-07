@@ -7,24 +7,27 @@ import HeroOrbit from "@/components/HeroOrbit";
 
 function HeroSection() {
     return (
-        <div className="relative w-screen h-screen flex-col-center overflow-clip">
+        <section className="relative w-screen h-screen flex-col-center overflow-clip">
             <div className="absolute inset-0
             [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]
             ">
+                {/* star on left */}
                 <HeroOrbit sizeStar={80} sizeOrbit={750} rotation={-80} opacity={0.9} />
                 <HeroOrbit sizeStar={20} sizeOrbit={400} rotation={-20} opacity={0.4} />
                 <HeroOrbit sizeStar={30} sizeOrbit={520} rotation={20} opacity={1} />
-                {/* right */}
+                {/* star on right */}
                 <HeroOrbit sizeStar={15} sizeOrbit={440} rotation={85} opacity={0.3} />
                 <HeroOrbit sizeStar={25} sizeOrbit={570} rotation={105} opacity={0.9} />
                 <HeroOrbit sizeStar={40} sizeOrbit={680} rotation={140} opacity={0.3} />
                 <HeroOrbit sizeStar={20} sizeOrbit={400} rotation={180} opacity={0.3} />
+                {/* texture */}
                 <HeroOrbit sizeStar={5} sizeOrbit={520} rotation={-40} opacity={0.4} isCircle />
                 <HeroOrbit sizeStar={5} sizeOrbit={650} rotation={-10} opacity={0.4} isCircle />
                 <HeroOrbit sizeStar={10} sizeOrbit={650} rotation={85} opacity={0.4} isCircle />
                 <div className="absolute inset-0 -z-10 opacity-5">
                     <Image src={grainImage} alt="Grain texture" fill className="object-cover opacity-20" />
                 </div>
+                {/* orbit texture */}
                 <div className="absolute h-[620px] w-[620px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-300/5 inset-0 shadow-[0_0_80px_inset] shadow-emerald-300/5 -z-10"></div>
                 <div className="absolute h-[820px] w-[820px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-300/5 inset-0 shadow-[0_0_80px_inset] shadow-emerald-300/5 -z-10"></div>
                 <div className="absolute h-[1020px] w-[1020px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-emerald-300/5 inset-0 shadow-[0_0_80px_inset] shadow-emerald-300/5 -z-10"></div>
@@ -58,7 +61,7 @@ function HeroSection() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
