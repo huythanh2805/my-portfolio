@@ -2,46 +2,51 @@ import { Sparkle } from 'lucide-react'
 import React from 'react'
 
 type Props = {
-    sizeStar: number
-    sizeOrbit: number
-    rotation: number
-    opacity: number
-    isCircle?: boolean
+  sizeStar: number
+  sizeOrbit: number
+  rotation: number
+  opacity: number
+  isCircle?: boolean
 }
 
 function HeroOrbit({ sizeStar, sizeOrbit, rotation, opacity, isCircle }: Props) {
-    return (
-        <div style={{
-            transform: `rotate(${rotation}deg)`,
-            height: `${sizeOrbit}px`,
-            width: `${sizeOrbit}px`,
+  return (
+    <div
+      style={{
+        transform: `rotate(${rotation}deg)`,
+        height: `${sizeOrbit}px`,
+        width: `${sizeOrbit}px`,
+      }}
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    >
+      <div
+        style={{
+          transform: `rotate(${rotation * -1}deg)`,
         }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div style={{
-                transform: `rotate(${rotation * -1}deg)`
-            }} className=" inline-flex">
-                {
-                    isCircle ? 
-                        <div style={{
-                            height: `${sizeStar}px`,
-                            width: `${sizeStar}px`,
-                            opacity: opacity,
-                        }}
-                            className=" bg-emerald-300 rounded-full"
-                        />
-                        :
-                        <Sparkle style={{
-                            height: `${sizeStar}px`,
-                            width: `${sizeStar}px`,
-                            opacity: opacity,
-                        }}
-                            className="fill-current stroke-none text-emerald-300"
-                        />
-                }
-            </div>
-
-        </div>
-    )
+        className=" inline-flex"
+      >
+        {isCircle ? (
+          <div
+            style={{
+              height: `${sizeStar}px`,
+              width: `${sizeStar}px`,
+              opacity: opacity,
+            }}
+            className=" bg-emerald-300 rounded-full"
+          />
+        ) : (
+          <Sparkle
+            style={{
+              height: `${sizeStar}px`,
+              width: `${sizeStar}px`,
+              opacity: opacity,
+            }}
+            className="fill-current stroke-none text-emerald-300"
+          />
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default HeroOrbit

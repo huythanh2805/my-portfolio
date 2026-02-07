@@ -1,21 +1,20 @@
-import React from 'react';
-import { ArrowUpRight, Check } from 'lucide-react';
-import Image from 'next/image';
-import grainImage from "@/assets/images/grain.jpg";
-
+import React from 'react'
+import { ArrowUpRight, Check } from 'lucide-react'
+import Image from 'next/image'
+import grainImage from '@/assets/images/grain.jpg'
 
 interface ProjectResult {
-  title: string;
+  title: string
 }
 
 interface ProjectCardProps {
-  company: string;
-  year: string;
-  title: string;
-  results: ProjectResult[];
-  link: string;
-  image: string;
-  isReversed?: boolean;
+  company: string
+  year: string
+  title: string
+  results: ProjectResult[]
+  link: string
+  image: string
+  isReversed?: boolean
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -30,17 +29,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       className="relative rounded-3xl p-8 md:p-10 lg:p-12 overflow-hidden border border-white/50 bg-white/5"
-    // style={{
-    //   backgroundColor: '#141a26',
-    //   boxShadow: '0 0 60px -15px rgba(45, 212, 191, 0.15)',
-    // }}
+      // style={{
+      //   backgroundColor: '#141a26',
+      //   boxShadow: '0 0 60px -15px rgba(45, 212, 191, 0.15)',
+      // }}
     >
       <div className="absolute inset-0 -z-10 opacity-5">
         <Image src={grainImage} alt="Grain texture" fill className="object-cover opacity-20" />
       </div>
       <div
-        className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
-          } gap-8 lg:gap-16 items-center`}
+        className={`flex flex-col ${
+          isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
+        } gap-8 lg:gap-16 items-center`}
       >
         {/* Content */}
         <div className="flex-1 space-y-6">
@@ -71,9 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
           {/* CTA Button */}
           <a href={link} target="_blank" rel="noopener noreferrer">
-            <button
-              className="group mt-4 inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 transition-colors border border-[#1e293b] bg-transparent text-[#f1f5f9] hover:bg-[#2dd4bf] hover:text-[#0a0d14]"
-            >
+            <button className="group mt-4 inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-10 px-4 py-2 transition-colors border border-[#1e293b] bg-transparent text-[#f1f5f9] hover:bg-[#2dd4bf] hover:text-[#0a0d14]">
               Visit Live Site
               <ArrowUpRight className="w-4 h-4 ml-2 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </button>
@@ -85,7 +83,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="relative">
             <div
               className="absolute inset-0 rounded-xl opacity-50"
-              style={{ background: 'linear-gradient(to bottom right, rgba(45, 212, 191, 0.2), transparent)' }}
+              style={{
+                background:
+                  'linear-gradient(to bottom right, rgba(45, 212, 191, 0.2), transparent)',
+              }}
             />
             <Image
               src={image}
@@ -96,7 +97,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

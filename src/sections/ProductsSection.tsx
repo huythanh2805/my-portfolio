@@ -1,8 +1,8 @@
-import React from 'react';
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
-import ProjectCard from '@/components/ProjectCard';
+import React from 'react'
+import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png'
+import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png'
+import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png'
+import ProjectCard from '@/components/ProjectCard'
 
 const portfolioProjects = [
   {
@@ -41,7 +41,7 @@ const portfolioProjects = [
     link: 'https://youtu.be/example123',
     image: aiStartupLandingPage,
   },
-];
+]
 
 const ProductsSection: React.FC = () => {
   return (
@@ -63,16 +63,12 @@ const ProductsSection: React.FC = () => {
         {/* Project Cards */}
         <div className="space-y-12 lg:space-y-20">
           {portfolioProjects.map((project, index) => (
-            <ProjectCard
-              key={project.title}
-              {...project}
-              isReversed={index % 2 === 1}
-            />
+            <ProjectCard key={project.title} {...project} isReversed={index % 2 === 1} />
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProductsSection;
+export default ProductsSection
