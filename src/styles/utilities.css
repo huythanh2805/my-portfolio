@@ -14,3 +14,23 @@
   justify-content: center;
   align-items: center;
 }
+@layer components {
+  .page-container {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 0; 
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+  }
+
+  @media (min-width: 1280px) {
+    .page-container {
+      width: 1280px;
+      padding-top: 3rem; 
+      padding-bottom: 3rem;
+    }
+  }
+}

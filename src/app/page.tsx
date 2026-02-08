@@ -1,3 +1,4 @@
+import ClientTestimonial from '@/sections/ClientTestimonial'
 import Header from '@/sections/Header'
 import HeroSection from '@/sections/HeroSection'
 import ProductsSection from '@/sections/ProductsSection'
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <ProductsSection />
       <TapeSection />
+      <ClientTestimonial />
     </div>
   )
 }

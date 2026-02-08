@@ -12,7 +12,7 @@ function HeroSection() {
         className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] "
       >
         {/* star on left */}
-        <HeroOrbit sizeStar={80} sizeOrbit={750} rotation={-80} opacity={0.9} />
+        <HeroOrbit sizeStar={80} sizeOrbit={750} rotation={-80} opacity={1}/>
         <HeroOrbit sizeStar={20} sizeOrbit={400} rotation={-20} opacity={0.4} />
         <HeroOrbit sizeStar={30} sizeOrbit={520} rotation={20} opacity={1} />
         {/* star on right */}

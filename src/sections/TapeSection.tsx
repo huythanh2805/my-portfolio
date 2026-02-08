@@ -16,7 +16,7 @@ const words = [
 type Props = {}
 function TapeSection({ }: Props) {
     return (
-            <div className="relative w-full overflow-hidden h-45 flex-col-center">
+            <div className="relative w-full overflow-hidden h-64 lg:h-84 flex-col-center ">
                 <div className='bg-linear-to-r from-emerald-300 to-sky-400 -rotate-3 '>
                     <div className="flex animate-tape mask-[linear-gradient(to_right,transparent,black_40%,black_60%,transparent)]
 ">
@@ -33,7 +33,7 @@ function TapeSection({ }: Props) {
                         ))}
                     </div>
                 </div>
-            </div>
+        </div>
     )
 }
 
