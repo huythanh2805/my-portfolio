@@ -1,4 +1,4 @@
-import { Sparkle } from 'lucide-react'
+import Star from '@/assets/icons/star.svg'
 import React from 'react'
 
 type Props = {
@@ -35,13 +35,13 @@ function HeroOrbit({ sizeStar, sizeOrbit, rotation, opacity, isCircle }: Props) 
             className=" bg-emerald-300 rounded-full"
           />
         ) : (
-          <Sparkle
+          <Star
             style={{
               height: `${sizeStar}px`,
               width: `${sizeStar}px`,
               opacity: opacity,
             }}
-            className="fill-current stroke-none text-emerald-300"
+            className=" text-emerald-300"
           />
         )}
       </div>

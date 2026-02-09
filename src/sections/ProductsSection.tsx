@@ -48,11 +48,11 @@ const ProductsSection: React.FC = () => {
   return (
     <section className="page-container">
       {/* Section Header */}
-     <SectionHeader 
+      <SectionHeader
         name="Real-World Results"
         title="Featured Projects"
         subtitle="See how I transformed concepts into engaging digital experiences."
-     />
+      />
 
       {/* Project Cards */}
       <div className="space-y-12 lg:space-y-20">
