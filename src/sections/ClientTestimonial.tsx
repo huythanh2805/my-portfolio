@@ -44,7 +44,7 @@ type Props = {}
 
 function ClientTestimonial({}: Props) {
   return (
-    <div className="page-container overflow-hidden">
+    <div className="page-container overflow-hidden min-h-0 ">
       {/* Section Header */}
       <SectionHeader
         name="Happy Clients"
