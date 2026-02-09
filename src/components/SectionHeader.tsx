@@ -12,7 +12,7 @@ function SectionHeader({ name, title, subtitle }: Props) {
             <p className="bg-linear-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm font-semibold tracking-widest uppercase mb-4">
                {name}
             </p>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-medium text-[#f1f5f9] mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif font-medium text-[#f1f5f9] mb-6">
                 {title}
             </h2>
             <p className="text-[#94a3b8] text-lg max-w-md mx-auto">

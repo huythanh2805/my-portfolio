@@ -51,15 +51,16 @@ function ClientTestimonial({ }: Props) {
         title="What People Say About Me"
         subtitle="Don't just take my word for it. See what my clients have to say about my work"
       />
+      {/* Fade layer */}
       <div
         className="relative inset-0 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] "
       >
         <div className="flex-row-center justify-start">
           {
             testimonials.map((testimonial, index) => (
-              <Card key={index}>
+              <Card key={index} className="min-w-[375px] h-55 mx-6">
                 {/* Client Information */}
-                <div className="w-full lg:w-125 lg:min-w-125 h-55 ">
+                <div className="w-full ">
                   <div className='flex-row-center gap-4 justify-start'>
                     <div className='w-14 h-14 rounded-full bg-white/25 flex-col-center'>
                       <Image src={testimonial.avatar} alt="Customer Avatar" width={50} height={50} />
