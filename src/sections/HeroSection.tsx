@@ -9,19 +9,45 @@ function HeroSection() {
   return (
     <section className="relative w-screen h-screen flex-col-center overflow-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] ">
-        {/* star on left */}
-        <HeroOrbit sizeStar={80} sizeOrbit={750} rotation={-80} opacity={1} />
-        <HeroOrbit sizeStar={20} sizeOrbit={400} rotation={-20} opacity={0.4} />
-        <HeroOrbit sizeStar={30} sizeOrbit={520} rotation={20} opacity={1} />
-        {/* star on right */}
-        <HeroOrbit sizeStar={15} sizeOrbit={440} rotation={85} opacity={0.3} />
-        <HeroOrbit sizeStar={25} sizeOrbit={570} rotation={105} opacity={0.9} />
-        <HeroOrbit sizeStar={40} sizeOrbit={680} rotation={140} opacity={0.3} />
-        <HeroOrbit sizeStar={20} sizeOrbit={400} rotation={180} opacity={0.3} />
-        {/* texture */}
-        <HeroOrbit sizeStar={5} sizeOrbit={520} rotation={-40} opacity={0.4} isCircle />
-        <HeroOrbit sizeStar={5} sizeOrbit={650} rotation={-10} opacity={0.4} isCircle />
-        <HeroOrbit sizeStar={10} sizeOrbit={650} rotation={85} opacity={0.4} isCircle />
+        <div className="animate-spin absolute inset-0 [animation-duration:30s]">
+          {/* star on left */}
+          <HeroOrbit sizeStar={80} sizeOrbit={750} rotation={-80} opacity={1} starDuraiton="34s" />
+          <HeroOrbit
+            sizeStar={20}
+            sizeOrbit={400}
+            rotation={-20}
+            opacity={0.4}
+            starDuraiton="30s"
+          />
+          <HeroOrbit sizeStar={30} sizeOrbit={520} rotation={20} opacity={1} starDuraiton="32s" />
+          {/* star on right */}
+          <HeroOrbit sizeStar={15} sizeOrbit={440} rotation={85} opacity={0.3} starDuraiton="30s" />
+          <HeroOrbit
+            sizeStar={25}
+            sizeOrbit={570}
+            rotation={105}
+            opacity={0.9}
+            starDuraiton="32s"
+          />
+          <HeroOrbit
+            sizeStar={40}
+            sizeOrbit={680}
+            rotation={140}
+            opacity={0.3}
+            starDuraiton="34s"
+          />
+          <HeroOrbit
+            sizeStar={20}
+            sizeOrbit={400}
+            rotation={180}
+            opacity={0.3}
+            starDuraiton="30s"
+          />
+          {/* texture */}
+          <HeroOrbit sizeStar={5} sizeOrbit={520} rotation={-40} opacity={0.4} isCircle />
+          <HeroOrbit sizeStar={5} sizeOrbit={650} rotation={-10} opacity={0.4} isCircle />
+          <HeroOrbit sizeStar={10} sizeOrbit={650} rotation={85} opacity={0.4} isCircle />
+        </div>
         <div className="absolute inset-0 -z-10 opacity-5">
           <Image src={grainImage} alt="Grain texture" fill className="object-cover opacity-20" />
         </div>
@@ -34,7 +60,10 @@ function HeroSection() {
           <div className="flex-row-center flex-col mb-6">
             <Image src={memojiImage} alt="Memoji of the developer" width={80} height={80} />
             <div className="flex-row-center bg-gray-950 px-3 py-0.5 border border-gray-600 rounded-md">
-              <div className="size-2.5 mr-3 bg-green-500 rounded-full"></div>
+              <span className="relative flex size-2.5 mr-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500"></span>
+              </span>
               <div className="text-sm">Available for new projects</div>
             </div>
           </div>

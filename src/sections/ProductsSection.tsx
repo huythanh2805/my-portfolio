@@ -57,7 +57,12 @@ const ProductsSection: React.FC = () => {
       {/* Project Cards */}
       <div className="space-y-12 lg:space-y-20">
         {portfolioProjects.map((project, index) => (
-          <ProjectCard key={project.title} {...project} isReversed={index % 2 === 1} />
+          <ProjectCard
+            key={project.title}
+            {...project}
+            isReversed={index % 2 === 1}
+            style={{ top: `${64 + index * 40}px` }}
+          />
         ))}
       </div>
     </section>

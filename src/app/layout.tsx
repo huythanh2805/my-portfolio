@@ -2,6 +2,26 @@ import type { Metadata } from 'next'
 import { Inter, Calistoga } from 'next/font/google'
 import '@/styles/globals.css'
 
+export const metadata: Metadata = {
+  title: 'Lê Thanh | Software Engineer',
+  description:
+    'Software Engineer building scalable web applications and backend systems using modern technologies.',
+  keywords: [
+    'Lê Thanh',
+    'Backend Developer',
+    'Node.js',
+    'NestJS',
+    'TypeScript',
+    'Nextjs',
+    'Reactjs',
+    'Portfolio',
+  ],
+  authors: [{ name: 'Lê Thanh' }],
+  creator: 'Lê Thanh',
+  icons: {
+    icon: '/lethanh.jpg',
+  },
+}
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -12,11 +32,6 @@ const calistoga = Calistoga({
   variable: '--font-serif',
   weight: '400',
 })
-
-export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'Created with the help of Frontend Tribe',
-}
 
 export default function RootLayout({
   children,

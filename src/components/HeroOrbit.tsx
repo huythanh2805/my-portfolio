@@ -7,9 +7,10 @@ type Props = {
   rotation: number
   opacity: number
   isCircle?: boolean
+  starDuraiton?: string
 }
 
-function HeroOrbit({ sizeStar, sizeOrbit, rotation, opacity, isCircle }: Props) {
+function HeroOrbit({ sizeStar, sizeOrbit, rotation, opacity, isCircle, starDuraiton }: Props) {
   return (
     <div
       style={{
@@ -32,7 +33,7 @@ function HeroOrbit({ sizeStar, sizeOrbit, rotation, opacity, isCircle }: Props) 
               width: `${sizeStar}px`,
               opacity: opacity,
             }}
-            className=" bg-emerald-300 rounded-full"
+            className="bg-emerald-300 rounded-full"
           />
         ) : (
           <Star
@@ -40,8 +41,9 @@ function HeroOrbit({ sizeStar, sizeOrbit, rotation, opacity, isCircle }: Props) 
               height: `${sizeStar}px`,
               width: `${sizeStar}px`,
               opacity: opacity,
+              animationDuration: starDuraiton,
             }}
-            className=" text-emerald-300"
+            className=" text-emerald-300 animate-spin"
           />
         )}
       </div>

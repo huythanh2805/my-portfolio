@@ -1,7 +1,8 @@
 import React from 'react'
 import { ArrowUpRight, Check } from 'lucide-react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import grainImage from '@/assets/images/grain.jpg'
+import { twMerge } from 'tailwind-merge'
 
 interface ProjectResult {
   title: string
@@ -13,8 +14,9 @@ interface ProjectCardProps {
   title: string
   results: ProjectResult[]
   link: string
-  image: string
+  image: string | StaticImageData
   isReversed?: boolean
+  style: React.CSSProperties
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -25,10 +27,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
   image,
   isReversed = false,
+  style,
 }) => {
   return (
     <div
-      className="relative rounded-3xl p-8 md:p-10 lg:p-12 overflow-hidden border border-white/50 bg-white/5"
+      style={style}
+      className={
+        'rounded-3xl p-8 md:p-10 lg:p-12 overflow-hidden border border-white/50 bg-white/5 sticky backdrop-blur-3xl'
+      }
       // style={{
       //   backgroundColor: '#141a26',
       //   boxShadow: '0 0 60px -15px rgba(45, 212, 191, 0.15)',

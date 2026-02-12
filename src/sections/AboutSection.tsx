@@ -1,6 +1,7 @@
+'use client'
 import Card from '@/components/Card'
 import SectionHeader from '@/components/SectionHeader'
-import React from 'react'
+import React, { useRef } from 'react'
 import BookImage from '@/assets/images/book-cover.png'
 import JavascriptIcon from '@/assets/icons/square-js.svg'
 import HTMLIcon from '@/assets/icons/html5.svg'
@@ -12,6 +13,7 @@ import Image from 'next/image'
 import CardHeader from '@/components/CardHeader'
 import ToolBox from '@/components/ToolBox'
 import MapImage from '@/assets/images/map.png'
+import { motion } from 'framer-motion'
 const toolboxItems = [
   {
     title: 'JavaScript',
@@ -37,10 +39,6 @@ const toolboxItems = [
     title: 'GitHub',
     icon: GithubIcon,
   },
-  {
-    title: 'GitHub',
-    icon: GithubIcon,
-  },
 ]
 const hobbies = [
   {
@@ -52,8 +50,8 @@ const hobbies = [
   {
     title: 'Photography',
     emoji: '📷',
-    left: '60%',
-    top: '15%',
+    left: '18%',
+    top: '8%',
   },
   {
     title: 'Gaming',
@@ -64,7 +62,7 @@ const hobbies = [
   {
     title: 'Hiking',
     emoji: '🥾',
-    left: '70%',
+    left: '0%',
     top: '50%',
   },
   {
@@ -77,17 +75,18 @@ const hobbies = [
     title: 'Fitness',
     emoji: '🏋️',
     left: '55%',
-    top: '75%',
+    top: '55%',
   },
   {
     title: 'Reading',
     emoji: '📚',
     left: '35%',
-    top: '80%',
+    top: '60%',
   },
 ]
 
 function AboutSection() {
+  const contrainRef = useRef(null)
   return (
     <div className="page-container">
       {/* Header Section */}
@@ -114,8 +113,11 @@ function AboutSection() {
             subtitle="Explore the technologies and tools I use to craft exceptional digital experiences."
           />
           <div className="w-full  relative inset-0 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] ">
-            <ToolBox toolboxItems={toolboxItems} />
-            <ToolBox toolboxItems={toolboxItems} className="-translate-x-12" />
+            <ToolBox toolboxItems={toolboxItems} className="animate-marquee" />
+            <ToolBox
+              toolboxItems={toolboxItems}
+              className="animate-marquee-to-left -translate-x-12"
+            />
           </div>
         </Card>
       </div>
@@ -128,14 +130,20 @@ function AboutSection() {
               title="Beyond the code"
               subtitle="Explore my interests and hobbies beyond the digital realm."
             />
-            <div className="flex-1 relative inset-0">
+            <div ref={contrainRef} className="flex-1 relative inset-0">
               {hobbies.map((hobby, index) => (
-                <div key={index} className="absolute" style={{ left: hobby.left, top: hobby.top }}>
+                <motion.div
+                  drag
+                  dragConstraints={contrainRef}
+                  key={index}
+                  className="absolute"
+                  style={{ left: hobby.left, top: hobby.top }}
+                >
                   <span className="text-gray-900 cursor-pointer bg-linear-to-r from-emerald-300 px-4 py-1 to-sky-400 rounded-full text-sm font-medium flex items-center gap-2">
                     {hobby.title}
                     {hobby.emoji}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
