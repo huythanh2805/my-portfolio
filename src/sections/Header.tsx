@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-function Header({}: Props) {
+function Header() {
   return (
     <div className="flex-row-center fixed top-3 left-1/2 -translate-x-1/2 z-50 ">
       <nav className="flex gap-1 border rounded-full p-0.5 border-white/15 bg-white/10 backdrop-blur">

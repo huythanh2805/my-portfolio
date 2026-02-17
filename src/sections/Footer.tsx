@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import React from 'react'
 
-type Props = {}
+
 const FooterLinks = [
   {
     name: 'Youtube',
@@ -20,7 +20,7 @@ const FooterLinks = [
     link: '#',
   },
 ]
-function Footer({}: Props) {
+function Footer() {
   return (
     <div className="page-container py-4 min-h-0 mt-4 border-t border-white/25 flex flex-col gap-4 md:flex-row items-center justify-center md:justify-between">
       {/* Layer */}

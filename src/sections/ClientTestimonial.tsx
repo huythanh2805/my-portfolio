@@ -41,9 +41,9 @@ export const testimonials = [
   },
 ]
 
-type Props = {}
 
-function ClientTestimonial({}: Props) {
+
+function ClientTestimonial() {
   return (
     <div className="page-container overflow-hidden min-h-0">
       <SectionHeader

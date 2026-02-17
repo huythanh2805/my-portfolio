@@ -1,6 +1,7 @@
 import AboutSection from '@/sections/AboutSection'
 import ClientTestimonial from '@/sections/ClientTestimonial'
 import ContactSection from '@/sections/ContactSection'
+// import ExperienceSection from '@/sections/ExperienceSection'
 import Footer from '@/sections/Footer'
 import Header from '@/sections/Header'
 import HeroSection from '@/sections/HeroSection'
@@ -12,6 +13,7 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
+      {/* <ExperienceSection /> */}
       <ProductsSection />
       <TapeSection />
       <ClientTestimonial />

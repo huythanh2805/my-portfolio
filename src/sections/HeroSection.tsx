@@ -74,7 +74,7 @@ function HeroSection() {
             </div>
             <div className="text-white/25 text-center w-full md:w-5/6 mt-2 mb-4">
               I specialize in transforming designs into functional, high-performing web
-              applications. Let's discuss your next project.
+              applications. Let&apos;s discuss your next project.
             </div>
 
             <div className="flex-col-center md:flex-row gap-2 md:gap-4">
@@ -83,7 +83,7 @@ function HeroSection() {
                 <ArrowDown className="ml-2 size-4" />
               </button>
               <button className="bg-white border text-black font-semibold border-white/15 px-4 py-2 rounded-lg flex-row-center hover:bg-white/75 transition cursor-pointer">
-                👋 Let's Connect
+                👋 Let&apos;s Connect
               </button>
             </div>
           </div>

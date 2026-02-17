@@ -14,9 +14,7 @@ const words = [
   'Reliable',
 ]
 
-type Props = {}
-
-function TapeSection({}: Props) {
+function TapeSection() {
   return (
     <div className="relative w-full h-64 lg:h-84 flex-col-center">
       <div className="bg-linear-to-r from-emerald-300 to-sky-400 -rotate-3">
