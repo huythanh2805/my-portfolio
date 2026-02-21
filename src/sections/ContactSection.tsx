@@ -9,8 +9,8 @@ function ContactSection() {
             Let&apos;s create something amazing together
           </h2>
           <p className="text-sm text-gray-950 font-medium text-center md:text-start">
-            Ready to bring your next project to life? Let&apos;s connect and discuss how I can help you
-            achieve your goals.
+            Ready to bring your next project to life? Let&apos;s connect and discuss how I can help
+            you achieve your goals.
           </p>
         </div>
         <div>

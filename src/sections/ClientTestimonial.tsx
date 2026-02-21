@@ -41,8 +41,6 @@ export const testimonials = [
   },
 ]
 
-
-
 function ClientTestimonial() {
   return (
     <div className="page-container overflow-hidden min-h-0">

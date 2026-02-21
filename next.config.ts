@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+   // Turbopack (dev)
   turbopack: {
     rules: {
       '*.svg': {
@@ -27,6 +28,14 @@ const nextConfig: NextConfig = {
         as: '*.js',
       },
     },
+  },
+   // Webpack (production build)
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
+    return config
   },
 }
 

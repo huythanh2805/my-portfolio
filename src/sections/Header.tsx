@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Header() {
   return (
     <div className="flex-row-center fixed top-3 left-1/2 -translate-x-1/2 z-50 ">

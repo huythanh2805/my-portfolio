@@ -1,8 +1,6 @@
 import ExperienceTimeline from '@/components/ExperienceTimeline'
 function ExperienceSection() {
-  return (
-    <ExperienceTimeline />
-  )
+  return <ExperienceTimeline />
 }
 
 export default ExperienceSection
